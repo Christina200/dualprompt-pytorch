@@ -2,7 +2,7 @@ import argparse
 
 def get_args_parser(subparsers):
     subparsers.add_argument('--batch-size', default=24, type=int, help='Batch size per device')
-    subparsers.add_argument('--epochs', default=5, type=int)
+    subparsers.add_argument('--epochs', default=1, type=int)
 
     # Model parameters
     subparsers.add_argument('--model', default='vit_base_patch16_224', type=str, metavar='MODEL', help='Name of model to train')
@@ -71,7 +71,7 @@ def get_args_parser(subparsers):
 
     # Continual learning parameters
     subparsers.add_argument('--num_tasks', default=10, type=int, help='number of sequential tasks')
-    subparsers.add_argument('--train_mask', default=True, type=bool, help='if using the class mask at training')
+    subparsers.add_argument('--train_mask', default=False, type=bool, help='if using the class mask at training')
     subparsers.add_argument('--task_inc', default=False, type=bool, help='if doing task incremental')
 
     # G-Prompt parameters

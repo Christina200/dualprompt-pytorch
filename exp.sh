@@ -1,0 +1,1 @@
+CUDA_VISIBLE_DEVICES=2 nohup python main.py cifar100_dualprompt --model vit_base_patch16_224 --batch-size 24 --data-path ./datasets/ --output_dir ./output > dualprompt_cifar100_online.log
